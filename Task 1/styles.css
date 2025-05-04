@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: didot, serif;
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
@@ -30,6 +30,7 @@ img {
 }
 
 button {
+  font-family: inherit;
     padding: 12px 25px;
     background-color: #4CAF50;
     color: white;
