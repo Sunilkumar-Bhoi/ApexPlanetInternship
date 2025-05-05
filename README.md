@@ -13,7 +13,7 @@ This internship was divided into 5 main tasks:
 - Created a fun and futuristic plant care webpage using HTML, CSS, and JavaScript.
 - Practiced semantic HTML structure, styling with CSS, and simple JS interactivity.
 - Includes an image, care tips, and a button that triggers a JavaScript alert.
-![Screenshot](/assets /images/IMG-20250504-WA0025.jpg)
+![Screenshot](https://github.com/Sunilkumar-Bhoi/ApexPlanetInternship/blob/main/assets%20/images/IMG-20250504-WA0025.jpg)
 ### ✅ Task 2: Responsive Form & Layout
 - Created a responsive contact form with validation
 - Practiced Flexbox, media queries, and form validation logic
