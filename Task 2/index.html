@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>My Personal Dashboard</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#todo">To-Do</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="dashboard-main">
+            <section id="home" class="dashboard-section active">
+                <h2>Welcome to Your Dashboard</h2>
+                <p>This responsive dashboard combines multiple web development features including a to-do list, image gallery, and contact form with validation.</p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Tasks Completed</h3>
+                        <p id="completed-count">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Pending Tasks</h3>
+                        <p id="pending-count">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Gallery Items</h3>
+                        <p id="gallery-count">6</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="todo" class="dashboard-section">
+                <h2>To-Do List</h2>
+                <div class="todo-container">
+                    <div class="input-section">
+                        <input type="text" id="taskInput" placeholder="Add a new task...">
+                        <button id="addTaskBtn">Add Task</button>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <button id="showAll" class="active">All</button>
+                        <button id="showActive">Active</button>
+                        <button id="showCompleted">Completed</button>
+                    </div>
+                    
+                    <ul id="taskList"></ul>
+                    
+                    <div class="stats">
+                        <span id="taskCount">0 tasks remaining</span>
+                        <button id="clearCompleted">Clear Completed</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="gallery" class="dashboard-section">
+                <h2>Image Gallery</h2>
+                <div class="gallery-controls">
+                    <button id="addImageBtn">Add Image</button>
+                    <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+                </div>
+                <div class="gallery-grid" id="imageGallery">
+                    <!-- Images will be added here dynamically -->
+                    <div class="gallery-item">
+                        <img src="https://source.unsplash.com/random/300x200?nature" alt="Nature">
+                        <button class="delete-img-btn">×</button>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://source.unsplash.com/random/300x200?city" alt="City">
+                        <button class="delete-img-btn">×</button>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://source.unsplash.com/random/300x200?animal" alt="Animal">
+                        <button class="delete-img-btn">×</button>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://source.unsplash.com/random/300x200?food" alt="Food">
+                        <button class="delete-img-btn">×</button>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://source.unsplash.com/random/300x200?tech" alt="Technology">
+                        <button class="delete-img-btn">×</button>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://source.unsplash.com/random/300x200?people" alt="People">
+                        <button class="delete-img-btn">×</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="dashboard-section">
+                <h2>Contact Form</h2>
+                <div class="form-container">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <select id="subject" name="subject">
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="feedback">Feedback</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <span class="error-message" id="message-error"></span>
+                        </div>
+                        
+                        <button type="submit">Submit</button>
+                        <div id="form-success" class="success-message"></div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="dashboard-footer">
+            <p>&copy; 2023 My Dashboard. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
